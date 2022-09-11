@@ -1,0 +1,13 @@
+<div class="container">
+  <button>
+    <a
+      href="https://twitter.com/i/oauth2/authorize?response_type=code&client_id=bnRxRUlHR29wX29FcGR0a3IxWEQ6MTpjaQ&redirect_uri=http://localhost:4200&scope=tweet.read%20tweet.write%20users.read%20offline.access&state=state&code_challenge=challenge&code_challenge_method=plain"
+      >get Auth code</a
+    >
+  </button>
+
+  {{ "Auth_Code : " + authCode ? authCode : "" }}
+  <br />
+  <button (click)="getAccessToken()">get Access Token</button>
+  {{ "Access Token : " + (accesstoken | json) || "" }}
+</div>
